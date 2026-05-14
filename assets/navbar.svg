@@ -1,0 +1,29 @@
+<svg width="900" height="74" viewBox="0 0 900 74" fill="none" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="6" y="6" width="888" height="62" rx="16" fill="url(#bg)"></rect>
+  <rect x="6" y="6" width="888" height="62" rx="16" stroke="url(#border)" stroke-width="2"></rect>
+
+  <path d="M25 6H145L130 20H25C14.5 20 6 28.5 6 39V22C6 13.2 13.2 6 25 6Z" fill="#20FF9A" fill-opacity="0.16"></path>
+  <path d="M875 68H735L750 54H875C885.5 54 894 45.5 894 35V52C894 60.8 886.8 68 875 68Z" fill="#FF1FBF" fill-opacity="0.16"></path>
+
+  <path d="M24 20H130" stroke="#20FF9A" stroke-opacity="0.55" stroke-width="2"></path>
+  <path d="M770 54H876" stroke="#FF1FBF" stroke-opacity="0.45" stroke-width="2"></path>
+
+  <path d="M170 6L155 20" stroke="#20FF9A" stroke-opacity="0.35" stroke-width="2"></path>
+  <path d="M730 68L745 54" stroke="#FF1FBF" stroke-opacity="0.35" stroke-width="2"></path>
+
+  <rect x="18" y="18" width="864" height="38" rx="10" fill="black" fill-opacity="0.08"></rect>
+
+  <defs>
+    <linearGradient id="bg" x1="0" y1="37" x2="900" y2="37" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#072D1D" stop-opacity="0.95"></stop>
+      <stop offset="0.45" stop-color="#081A18" stop-opacity="0.88"></stop>
+      <stop offset="1" stop-color="#3A0D32" stop-opacity="0.9"></stop>
+    </linearGradient>
+
+    <linearGradient id="border" x1="0" y1="37" x2="900" y2="37" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#20FF9A" stop-opacity="0.65"></stop>
+      <stop offset="0.5" stop-color="#20FF9A" stop-opacity="0.08"></stop>
+      <stop offset="1" stop-color="#FF1FBF" stop-opacity="0.55"></stop>
+    </linearGradient>
+  </defs>
+</svg>

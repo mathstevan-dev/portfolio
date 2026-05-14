@@ -26,7 +26,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 0px;
+  gap: 10px;
   padding: 10px 2%;
   color: brown;
   position: fixed;
@@ -41,34 +41,44 @@ header {
     gap: 15px;
     list-style: none;
     align-items: center;
-    background-color: #03e9031a;
-    padding: 10px 13px;
-    border-radius: 10px;
-    backdrop-filter: blur(20px);
   }
 }
+
+.nav {
+  position: relative;
+  width: min(90vw, 900px);
+  height: 80px;
+}
+
+.navbarconteudo {
+   background-image: url(assets/navbar.svg);
+   background-size: 85% 80%;
+   background-position: center;
+   background-repeat: no-repeat;
+   position: relative;
+   z-index: 2;
+   width: min(90vw, 900px);
+   height: 80px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   animation: glowNavbar 3s ease-in-out infinite;
+}
+
 /* Configuraçoes do cabeçalho */
+
 header ul li a,
 header ul li a:visited {
   color: rgb(255, 255, 255);
   pointer-events: auto;
+  text-decoration: none;
+  
 }
 header ul li a:hover {
   color: #ff0000;
   transition: 1s;
   filter: brightness(1.5) drop-shadow(0 0 10px #aa9696);
   transition: 0.8s;
-}
-
-.gatinho {
-  display: flex;
-  align-items: center;
-  width: auto;
-}
-.gatinho img {
-  width: 150px;
-  height: auto;
-  transition: 0.5s;
 }
 
 .inicio{
@@ -126,24 +136,32 @@ header ul li a:hover {
 }
 
 /* Efeito quando o mouse está sobre o logotipo */
-header:hover .gatinho img,
-header:hover .gatinho i {
+header:hover .logo img,
+header:hover .logo i {
   filter: brightness(1.5) drop-shadow(0 0 10px #0dc110);
   transition: 0.5s;
   transform: rotate(10deg);
 }
 
-.gatinho img,
-.gatinho i {
-  transition: 0.5s;
-}
 /* Logotipo */
 
-.gatinho {
-  width: 100px;
-  height: 100px;
-  margin-right: 50px;
+.logo img,
+.logo i {
+  transition: 0.5s;
+  width: 150px;
+  height: auto;
 }
+
+.logo {
+display: flex;
+align-items: center;
+width: 70px;
+height: 100px;
+z-index: 2;
+animation-duration: 3s;
+animation-name: spin;
+}
+
 section {
   width: 100%;
   display: flex;
@@ -373,6 +391,32 @@ section {
   }
 }
 
+@keyframes spin {
+  0% {
+    scale: 0.1;
+  }
+  50%{
+    scale:1.0;
+  }
+  100%{
+  }
+}
+
+@keyframes glowNavbar {
+
+  0%, 100% {
+    filter:
+      drop-shadow(0 0 6px rgba(5, 90, 52, 0.438))
+      drop-shadow(0 0 12px rgba(217, 5, 154, 0.59));
+  }
+
+  50% {
+    filter:
+      drop-shadow(0 0 12px rgba(0, 255, 140, 0.77))
+      drop-shadow(0 0 22px rgba(255,0,180,0.18));
+  }
+}
+
 /* TELEFONE */
 
 @media (max-width: 768px) {
@@ -390,11 +434,11 @@ section {
   }
 
   .perfil {
-    width: clamp(180px, 60vw, 280px);
+    width: clamp(180px, 40vw, 200px);
   }
 
    .moldura {
-    transform: scale(0);
+    transform: scale(3);
   }
 
   .info {
@@ -425,7 +469,7 @@ section {
   }
 
     header {
-    padding: 70px;
+    padding: 0px 2%;
   }
 
   header ul {
@@ -439,9 +483,19 @@ section {
     font-size: 14px;
   }
 
-  .gatinho img {
-    width: 150px;
+  .logo img {
+    width: 120px;
   }
+
+  .navbarconteudo {
+   z-index: 2;
+   width: 500px;
+   height:100px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding: 0 23px;
+}
 
   .inicio,
   .pessoa,
@@ -449,7 +503,7 @@ section {
   .instagram,
   .git,
   .linkedin {
-    width: 16px;
+    width: 15px;
   }
 
 }
