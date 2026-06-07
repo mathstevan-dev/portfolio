@@ -109,7 +109,7 @@ function digitar4() {
 }
 digitar4();
 
-
+// Efeito de revelação
 const elementos = document.querySelectorAll(".revelar, .revelar-card");
 
 const observer = new IntersectionObserver(function(entries) {
@@ -125,6 +125,46 @@ elementos.forEach(function(elemento) {
 });
 
 
+// Terminal
+const input = document.querySelector("#comandoInput");
+const terminal = document.querySelector("#terminalConteudo");
+
+input.addEventListener("keydown", function(event) {
+    if (event.key === "Enter") {
+        const comando = input.value.toLowerCase().trim();
+
+        escreverLinha(`Terminal: ${comando}`);
+
+        executarComando(comando);
+
+        input.value = "";
+    }
+});
+
+function escreverLinha(texto) {
+    const linha = document.createElement("p");
+    linha.textContent = texto;
+    terminal.appendChild(linha);
+    terminal.scrollTop = terminal.scrollHeight;
+}
+
+function executarComando(comando) {
+    if (comando === "help") {
+        escreverLinha("Comandos disponíveis: sobre, skills, projetos, contato, clear.");
+    } else if (comando === "sobre") {
+        escreverLinha("Matheus Stevan — estudante de ADS de 28 anos focado em Front-End, com desejo de se desenvolver em full stack.");
+    } else if (comando === "skills") {
+        escreverLinha("HTML, CSS, JavaScript, Reacts, TypeScript, Git, GitHub e VS Code, entre outras tecnologias.");
+    } else if (comando === "projetos") {
+        escreverLinha("Projetos: Portfólio, Calculadora, Pedra Papel Tesoura.");
+    } else if (comando === "contato") {
+        escreverLinha("WhatsApp: 51 99015-1791 | GitHub: mathstevan-dev");
+    } else if (comando === "clear") {
+        terminal.innerHTML = "";
+    } else {
+        escreverLinha("Comando não encontrado. Digite help.");
+    }
+}
 
 function mostrarAlerta() {
  Onclick=""

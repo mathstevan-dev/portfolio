@@ -24,7 +24,8 @@
          <div class="navbarconteudo">
           <ul>
           <li><a href="#">Inicio <img src="assets/launch.svg" class="inicio"></a></li>
-          <li><a href="#section2">Sobre mim <img src="assets/person.svg" class="pessoa"></a></li>
+          <li><a href="#sobre">Sobre mim <img src="assets/person.svg" class="sobre"></a></li>
+          <li><a href="#terminalConteudo">Terminal <img src="assets/terminal.svg" class="terminalicon"></a></li>
           <li><a href="https://wa.me/5551990151791?text=Olá%20Matheus!%0A%0AVi%20seu%20portfólio%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto.">WhatsApp <img src="assets/whatsapp.png" class="whatsapp"></a></li>
           <li><a href="https://www.instagram.com/math_stevan/">Instagram <img src="assets/instagram.png" class="instagram"></a></li>
           <li><a href="https://github.com/mathstevan-dev">GitHub <img src="assets/github.png" class="git"></a></li>
@@ -51,7 +52,7 @@
         <p class="texto-3">Trabalhando com HTML, CSS, JavaScript.</p>
       </div>
       <div class="botoes">
-        <button class="botaohud"><a href="#section2">Sobre mim</a></button>
+        <button class="botaohud"><a href="#sobre">Sobre mim</a></button>
       </div>
     </div>
   </div>
@@ -59,10 +60,9 @@
 
     <!-- Sessão 2 -->
 
-    <section id="section2" class="secao2">
-      <img src="assets/titulo_h1.svg " class="tituloh1 revelar">
-      <h2 revelar> Conheça mais sobre mim, minhas habilidades e os
-        projetos que desenvolvo.
+    <section id="sobre" class="secao2">
+      <img src="assets/titulo_h1.svg" class="tituloh1 revelar">
+      <h2 class="revelar"> Conheça mais sobre mim, minhas habilidades e os projetos que desenvolvo.
       </h2>
      <div class="conteudo2">
       <div class="cards">
@@ -71,8 +71,7 @@
         <img src="assets/linha-neon-azul.svg" class="linhaazul">
         <img src="assets/sobremim.png" class="sobremim">
         <h3>SOBRE MIM</h3>
-        <p>Apaixonado por tecnologia e desenvolvimento. <br> 
-          Gosto de criar soluções funcionais <br>e com designs modernos.</p>
+        <p>Estudante de ADS, apaixonado por tecnologia<br> e desenvolvimento. Gosto de criar soluções <br>funcionais e com designs modernos.</p>
       </div>
       <div class="cardskills revelar-card">
         <img src="assets/iconeskills.png" class="iconeskills">
@@ -85,10 +84,14 @@
       <div class="cardprojetos revelar-card">
         <img src="assets/iconeprojetos.png" class="iconeprojetos">
         <img src="assets/linha-neon-rosa.svg" class="linharosa">
-        <img src="assets/emconstruçao.png" class=" emconstrucao">
         <h3>PROJETOS</h3>
         <p>Alguns dos projetos que desenvolvi
           aplicando <br>tudo que aprendo no dia a dia.</p>
+           <a href="pedra-papel-tesoura.html"               class="botaoproj1">
+              <img src="assets/botao-projetos.svg" 
+                 alt="Pedra Papel Tesoura">
+                <span>Pedra Papel Tesoura</span> 
+        </a>
         </div>
       </div>
 
@@ -98,8 +101,28 @@
       <!-- Sessão 3 -->
 
     <Section class="secao3">
-      <div class="">
+
+      <div class="terminal">
+
+      <div class="terminal-topo">
+        <span></span>
+        <span></span>
+        <span></span>
+        <p>TERMINAL</p>
       </div>
+
+      <div class="terminal-conteudo" id="terminalConteudo">
+        <p>Bem vindo ao meu terminal</p>
+        <p>Digite <strong>HELP</strong> para ver os comandos</p>
+      </div>
+
+      <div class="terminal-input">
+        <span> Digite seu comando >>></span>
+        <input type="text" id="comandoInput" />
+        <p>Matheus@Terminal</p>
+      </div>
+
+    </div>
     </section>
     <script src="script.js"></script>
   </body>
